@@ -7,7 +7,7 @@ public class Club {
 	
 	private String ID;
 	private String name;
-	private Date creationdate;
+	private Date creationDate;
 	private String petKind;
 	
 	// Relations
@@ -17,11 +17,11 @@ public class Club {
 
 	//Methods
 	
-	public Club(String ID, String name, Date creationdate, String petKind) {
+	public Club(String ID, String name, Date creationDate, String petKind) {
 		
 		this.ID = ID;
 		this.name = name;
-		this.creationdate = creationdate;
+		this.creationDate = creationDate;
 		this.petKind = petKind;
 		owners = new ArrayList<Owner>();
 
@@ -48,13 +48,13 @@ public class Club {
 	}
 
 
-	public Date getCreationdate() {
-		return creationdate;
+	public Date getCreationDate() {
+		return creationDate;
 	}
 
 
-	public void setCreationdate(Date creationdate) {
-		this.creationdate = creationdate;
+	public void setCreationdate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 
 
@@ -75,6 +75,29 @@ public class Club {
 
 	public void setOwners(ArrayList<Owner> owners) {
 		this.owners = owners;
+	}
+
+	public int compareByID(Club p) {
+		return ID.compareTo(p.getID());
+	}
+	
+	public int compareByName(Club p) {
+		return name.compareTo(p.getName());
+	}
+	
+	
+	public int compareByCreationDate(Club p) {
+		return creationDate.compareTo(p.getCreationDate());
+	}
+	
+	public int compareByPetKind(Owner p) {
+		return petKind.compareTo(p.getPetKind());
+	}
+	
+	@Override
+	public String toString() {
+		return "Club [ID=" + ID + ", name=" + name + ", creationdate=" + creationDate + ", petKind=" + petKind
+				+ ", owners=" + owners + "]";
 	}
 	
 	

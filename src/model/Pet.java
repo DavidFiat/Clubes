@@ -15,8 +15,6 @@ public class Pet {
 	
 	//Methods
 	public Pet(String ID, String name, Date birthDay, int gender, String petKind) {
-		super();
-		
 		this.ID = ID;
 		this.name = name;
 		this.birthDay = birthDay;
@@ -62,6 +60,34 @@ public class Pet {
 
 	public void setPetKind(String petKind) {
 		this.petKind = petKind;
+	}
+
+	public int compareByID(Pet p) {
+		return ID.compareTo(p.getID());
+	}
+	
+	public int compareByName(Pet p) {
+		return name.compareTo(p.getName());
+	}
+	
+	public int compareByBirthDay(Pet p) {
+		return birthDay.compareTo(p.getBirthDay());
+	}
+	
+	
+	public int compareByGender(Pet p) {
+		return gender - (p.getGender());
+	}
+	
+	public int compareByPetKind(Pet p) {
+		return petKind.compareTo(p.getPetKind());
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Pet [ID=" + ID + ", name=" + name + ", birthDay=" + birthDay + ", gender=" + gender + ", petKind="
+				+ petKind + "]";
 	}
 	
 	

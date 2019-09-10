@@ -22,7 +22,7 @@ public class Main {
 public void showMenu(){
 		
 		int option = 0;
-		while (option != 11){
+		while (option != 9){
 			
 			
 		System.out.println(" WELCOME TO THE CLUBS MANAGEMENT SOFTWARE.");	
@@ -43,7 +43,7 @@ public void showMenu(){
 		  switch (option){
               
                case (1):
-			   
+			   System.out.println(software.getClubs());
 			 
 				
 				

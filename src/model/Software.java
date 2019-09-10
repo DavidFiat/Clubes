@@ -21,6 +21,11 @@ public class Software {
 		this.clubs = clubs;
 	}
 
+	@Override
+	public String toString() {
+		return "Software [clubs=" + clubs + "]";
+	}
+
 	
 	
 }
