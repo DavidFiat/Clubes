@@ -9,8 +9,11 @@ public class Main {
 	
 	
 	
+//	@SuppressWarnings("deprecation")
 	public Main(){
 				reader = new Scanner (System.in);
+			//	software = new Software(clubs.add(new Club("S","S",new Date(12,12,12),"String"));
+
  	}
 		
 	

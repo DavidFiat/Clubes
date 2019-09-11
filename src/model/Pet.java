@@ -2,7 +2,7 @@ package model;
 import java.util.*;
 
 
-public class Pet {
+public class Pet implements Comparable<Pet>, Comparator<Pet>{
 
 	//Attributes
 	public static final int MALE=1;
@@ -73,23 +73,26 @@ public class Pet {
 	public int compareByBirthDay(Pet p) {
 		return birthDay.compareTo(p.getBirthDay());
 	}
-	
-	
-	public int compareByGender(Pet p) {
-		return gender - (p.getGender());
-	}
-	
-	public int compareByPetKind(Pet p) {
-		return petKind.compareTo(p.getPetKind());
-	}
-	
-	
+
 	@Override
 	public String toString() {
 		return "Pet [ID=" + ID + ", name=" + name + ", birthDay=" + birthDay + ", gender=" + gender + ", petKind="
 				+ petKind + "]";
 	}
-	
+
+	//Using Comparable Interface
+	@Override
+	public int compareTo(Pet a){
+		return petKind.compareTo(a.getPetKind());
+	}
+
+	//Using Comparator Interface
+	@Override
+	public int compare(Pet a, Pet b) {
+		return (a.getGender())-(b.getGender());
+	}
+
+
 	
 	
 	
